@@ -1,6 +1,7 @@
 //Router for our operations
 const express = require('express')
 const router = express.Router()
+const app = express()
 
 //view engine
 app.set('view engine', 'ejs') 

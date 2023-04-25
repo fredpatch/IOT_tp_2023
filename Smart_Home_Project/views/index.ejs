@@ -13,7 +13,6 @@
     <link rel="stylesheet" href="assets/vendors/themify-icons/css/themify-icons.css">
     <!-- Bootstrap + Meyawo main styles -->
 	<link rel="stylesheet" href="assets/css/meyawo.css">
-    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -30,9 +29,6 @@
                 </li>
                 <li class="item">
                     <a class="link" href="#service">Data Inputs</a>
-                </li>
-                <li class="item">
-                    <a class="link" href="#testmonial">Testmonial</a>
                 </li>
                 <li class="item ml-md-3">
                     <a href="components.html" class="btn btn-primary">Components</a>
@@ -96,9 +92,16 @@
                 <div id="wrap">
                     
                 </div>       
-                <div>
+                <div><br><br><br>
                     <p class="section-subtitle">What about your</p>
           <h6 class="section-title mb-6">Local weather,Sunrise and Sunset times?</h6>
+          
+                    <p>
+                        Right below here is data surrouding your current location,
+                        <br>And a button that allows you to let the sunset/sunrise time control your house LED              
+                    </p>
+                    <button class="btn-rounded btn btn-outline-primary mt-4" id="btnSun">Auto Sunrise/Sunset</button>
+                    <br><br><br>
           <a class="weatherwidget-io" href="https://forecast7.com/en/33d57n7d59/casablanca/" data-label_1="CASABLANCA" data-label_2="WEATHER" data-icons="Climacons Animated" data-mode="Current" data-days="3" data-theme="weather_one" >CASABLANCA WEATHER</a>
           <script>
           !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');

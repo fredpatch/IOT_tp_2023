@@ -1,6 +1,6 @@
 let sunrise;
 let sunset;
-let sunriseStr, sunsetStr, strTime, local_time;
+let local_time;
 
 const sunrise_time = document.querySelector('#sunrise-time');
 const sunset_time = document.querySelector('#sunset-time');
@@ -14,7 +14,7 @@ function auto_on_off() {
     if(navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(function(position) {
             let positionInfo = "Current Position is (" + "Latitude: " + position.coords.latitude + ", " + "Longitude: " + position.coords.longitude + ")";
-            //document.getElementById("result").innerHTML = positionInfo;
+            document.getElementById("result").innerHTML = positionInfo;
             fetch(`https://api.sunrise-sunset.org/json?lat=${position.coords.latitude}&lng=${position.coords.longitude}&date=today&formatted=0`,
                 {
                     method: 'GET',
@@ -88,6 +88,5 @@ function auto_on_off() {
 
 document.addEventListener('DOMContentLoaded', function () {
     
-    setTimeout(function(){auto_on_off()}, 500);
-    //auto_on_off();
+    auto_on_off();
 });
